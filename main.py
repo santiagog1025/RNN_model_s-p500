@@ -13,10 +13,10 @@ sp500_df = sp500_table[0]
 tickers = sp500_df['Symbol'].tolist()
 
 # Conectar a SQL Server usando SQLAlchemy
-server = 'CASA12345667777\\SQLEXPRESS'
-database = 's&p500_proyect'
-user= "Proyect_sp500"
-password= "123456789"
+server = 'xxxxxxx\\SQLEXPRESS'
+database = 'xxxxx'
+user= "xxxxxx"
+password= "xxxxx"
 try:    
     conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes')
     print('Conexión exitosa')
