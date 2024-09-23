@@ -26,7 +26,7 @@ def obtener_datos_ticker(ticker):
     empresa = yf.Ticker(ticker)
     datos = empresa.history(period="1d")  # Datos diarios
     return datos
-# Establecer el periodo de 5 años (5y) y frecuencia diaria (1d)
+# Establecer el máximo periodo posible y frecuencia diaria (1d)
 period = "max"
 interval = "1d"
 
