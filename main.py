@@ -27,8 +27,8 @@ def obtener_datos_ticker(ticker):
     datos = empresa.history(period="1d")  # Datos diarios
     return datos
 # Establecer el periodo de 5 años (5y) y frecuencia diaria (1d)
-period = "5y"
-interval = "1h"
+period = "max"
+interval = "1d"
 
 # Función para obtener información de cada ticker
 def obtener_datos_daily(ticker):
@@ -52,5 +52,5 @@ df_datos_empresas = pd.concat(data)
 conn.close()
 df_datos_empresas.to_csv('prueba.csv')
 # Cojemos el S&p500 de vanguard y lo llevamos a 10 años
-df_syp500 = obtener_datos_daily("^GSPC")
+df_syp500 = obtener_datos_daily("SPY")
 df_syp500.to_csv('syp500.csv')
