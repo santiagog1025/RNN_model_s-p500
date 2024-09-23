@@ -1,6 +1,7 @@
 import pandas as pd
 import yfinance as yf
 import pyodbc
+from keys import server,database,user,password
 
 # Obtener la lista de constituyentes del S&P 500 desde Wikipedia
 url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
@@ -12,11 +13,7 @@ sp500_df = sp500_table[0]
 # Extraer solo los tickers
 tickers = sp500_df['Symbol'].tolist()
 
-# Conectar a SQL Server usando SQLAlchemy
-server = 'CASA12345667777\\SQLEXPRESS'
-database = 's&p500_proyect'
-user= "Proyect_sp500"
-password= "123456789"
+
 try:    
     conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes')
     print('Conexión exitosa')
