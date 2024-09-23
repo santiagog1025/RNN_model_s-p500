@@ -1,7 +1,7 @@
 import pandas as pd
 import yfinance as yf
 import pyodbc
-from keys import server,database,user,password
+from keys import server,database
 
 # Obtener la lista de constituyentes del S&P 500 desde Wikipedia
 url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
