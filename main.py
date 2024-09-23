@@ -13,7 +13,7 @@ sp500_df = sp500_table[0]
 # Extraer solo los tickers
 tickers = sp500_df['Symbol'].tolist()
 
-
+# Conectarse a la base de datos de SQL server, para esto importa los datos de un .py llamado keys
 try:    
     conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes')
     print('Conexión exitosa')
